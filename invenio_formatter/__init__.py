@@ -65,6 +65,6 @@ at `http://localhost:5000/badge/ISBN/9780399547331.svg
 
 from .ext import InvenioFormatter
 
-__version__ = "5.0.1"
+__version__ = "5.0.2"
 
 __all__ = ("__version__", "InvenioFormatter")
