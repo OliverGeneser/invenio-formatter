@@ -18,7 +18,7 @@ def get_text_length(*args):
     """
     txt = Image.new("RGBA", (16, 16), (255, 255, 255, 0))
     d = ImageDraw.Draw(txt)
-    font = ImageFont.truetype("DejaVuSans", 11)
+    font = ImageFont.truetype("DejaVuSans", 11, layout_engine=ImageFont.Layout.BASIC)
     result = ()
     for value in args:
         result = result + (d.textlength(value, font=font),)
