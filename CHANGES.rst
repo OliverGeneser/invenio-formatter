@@ -7,6 +7,10 @@
 Changes
 =======
 
+Version v5.0.3 (released 2026-08-27)
+
+- fix(badges): use the basic text layout engine
+
 Version v5.0.2 (released 2026-08-04)
 
 - fix(build): include mo files
