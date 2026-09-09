@@ -62,7 +62,9 @@ def create_badge_blueprint(allowed_types):
             generator(badge_title_mapping, value, **generator_kwargs), mimetype=mimetype
         )
         # Generate Etag from badge title and value.
-        hashable_badge = "{0}.{1}".format(badge_title_mapping, value).encode("utf-8")
+        hashable_badge = "{0}.{1}.{2}".format(
+            badge_title_mapping, value, generator_kwargs.get("color", "")
+        ).encode("utf-8")
         response.set_etag(hashlib.sha1(hashable_badge).hexdigest())
         response.cache_control.public = True
         response.cache_control.max_age = current_app.config[
